@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Login Page</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, blue, purple);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login {
+            background: white;
+            padding: 35px;
+            width: 320px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: purple;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login">
+
+    <h2>ABC College</h2>
+    <h3>Student Login</h3>
+
+    <input type="text" id="username" placeholder="Enter Student ID">
+
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <button onclick="login()">Login</button>
+
+    <p id="message"></p>
+
+</div>
+
+<script>
+    function login() {
+
+        let user = document.getElementById("username").value;
+        let pass = document.getElementById("password").value;
+
+        if (user == "" || pass == "") {
+            document.getElementById("message").innerHTML =
+            "Please fill all fields";
+        }
+
+        else if (user == "Neeraj" && pass == "12345") {
+            document.getElementById("message").innerHTML =
+            "Login Successful!";
+        }
+
+        else {
+            document.getElementById("message").innerHTML =
+            "Invalid Username or Password";
+        }
+    }
+</script>
+
+</body>
+</html>
